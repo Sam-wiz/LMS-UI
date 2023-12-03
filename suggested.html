@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="studcss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap" rel="stylesheet">
+    <title>Suggested</title>
+    <style>
+        #he {
+            margin: 0;
+            padding: 15px;
+            margin-top: 10px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px; /* Increased padding for more space */
+            background-color: #f0f0f0;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            scroll-behavior: smooth;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px; /* Increased padding for more space */
+            padding-top: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-family: 'Hedvig Letters Sans', sans-serif;
+            margin-top: 20px; /* Added margin-top for space between header and h1 */
+        }
+
+        h1,
+        img {
+            margin: 0;
+        }
+
+        img {
+            padding: 2%;
+            width: 10%;
+            margin-right: 10px;
+        }
+
+        nav {
+            position: relative;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle div {
+            width: 30px;
+            height: 4px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            padding-left: 300px;
+            justify-content: flex-end;
+        }
+
+        nav li {
+            font-size: 20px;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            position: relative;
+            transition: background-color 0.7s, color 0.7s, box-shadow 0.7s;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        nav.circle ul li a {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        nav.circle ul li a:after {
+            display: block;
+            position: absolute;
+            margin: 0;
+            top: 50%;
+            left: 50%;
+            content: '.';
+            color: transparent;
+            width: 1px;
+            height: 1px;
+            border-radius: 50%;
+            background: transparent;
+            transform: translate(-50%, -50%);
+            transition: width 0.5s, height 0.5s, background-color 0.5s;
+        }
+
+        nav.circle ul li a:hover {
+            color: #fff;
+        }
+
+        nav.circle ul li a:hover:after {
+            width: 50px;
+            height: 50px;
+            background: rgb(60, 128, 244);
+        }
+
+        .priority-container {
+            margin-top: 40px; /* Increased margin-top for more space */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .priority-box {
+            background-color: #fff; /* Changed background color */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px; /* Increased padding for a more prominent box */
+            margin-bottom: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: row; /* Adjusted to display in a row */
+            align-items: center; /* Centered items horizontally */
+        }
+
+        .priority-box-content {
+            flex: 1; /* Expanded to fill available space */
+        }
+
+        .priority-box h3 {
+            font-size: 24px;
+            color: #333; /* Changed text color */
+            margin-bottom: 10px;
+        }
+
+        .priority-box p {
+            font-size: 16px;
+            color: #555; /* Changed text color */
+            margin: 8px 0;
+        }
+
+        .priority-number {
+            font-size: 14px; /* Decreased font size */
+            font-weight: bold;
+            color: #333;
+            margin-right: 10px;
+        }
+
+       .priority-box a {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .priority-box a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="sst-logo.jpg" alt="">
+        <h1 class="he">LibraryManagementSystem</h1>
+        <nav class="circle">
+            <ul>
+                <li><a href="Addnew.html">Add</a></li>
+                <li><a href="dash.html">Dashboard</a></li>
+                <li><a href="stud.html">StudentList</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Suggested Books</h1>
+
+    <div class="priority-container">
+        <!-- Example Priority Box (Repeat as needed) -->
+        <div class="priority-box">
+            <span class="priority-number">1.</span>
+            <div class="priority-box-content">
+                <h3>Book Name</h3>
+                <p>Genre: Fiction</p>
+                <p>Student Name</p>
+                <p>Estimated Price: $20</p>
+                <a href="Addnew.html">Add</a>
+            </div>
+        </div>
+        <div class="priority-box">
+            <span class="priority-number">2.</span>
+            <div class="priority-box-content">
+                <h3>Book Name</h3>
+                <p>Genre: Fiction</p>
+                <p>Student Name</p>
+                <p>Estimated Price: $20</p>
+                <a href="Addnew.html">Add</a>
+            </div>
+        </div>
+        <div class="priority-box">
+            <span class="priority-number">3.</span>
+            <div class="priority-box-content">
+                <h3>Book Name</h3>
+                <p>Genre: Fiction</p>
+                <p>Student Name</p>
+                <p>Estimated Price: $20</p>
+                <a href="Addnew.html">Add</a>
+            </div>
+        </div>
+        <div class="priority-box">
+            <span class="priority-number">4.</span>
+            <div class="priority-box-content">
+                <h3>Book Name</h3>
+                <p>Genre: Fiction</p>
+                <p>Student Name</p>
+                <p>Estimated Price: $20</p>
+                <a href="Addnew.html">Add</a>
+            </div>
+        </div>
+        <div class="priority-box">
+            <span class="priority-number">5.</span>
+            <div class="priority-box-content">
+                <h3>Book Name</h3>
+                <p>Genre: Fiction</p>
+                <p>Student Name</p>
+                <p>Estimated Price: $20</p>
+                <a href="Addnew.html">Add</a>
+            </div>
+        </div>
+
+        <!-- Repeat similar priority-box divs for other suggested books -->
+    </div>
+</body>
+</html>

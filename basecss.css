@@ -1,0 +1,674 @@
+body {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-top: 0;
+    background-color: #f0f0f0; /* Add your preferred background color */
+}
+
+h1 {
+    font-size: 30px;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+}
+
+h1, img {
+    margin: 0;
+}
+
+img {
+    padding: 2%;
+    width: 10%; /* Set the desired width for your logo */
+    margin-right: 10px; /* Add spacing between the logo and h1 */
+}
+
+nav {
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding-left: 300px;
+    justify-content: flex-end;
+}
+
+nav li {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    transition: background-color 0.7s, color 0.7s, box-shadow 0.7s;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav.circle ul li a {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+nav.circle ul li a:after {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    content: '.';
+    color: transparent;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: transparent;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s, background-color 0.5s;
+}
+nav.circle ul li a:hover {
+    color: #fff; /* Change text color to white on hover */
+}
+nav.circle ul li a:hover:after {
+    width: 50px; /* Adjust the width as needed for the desired circle size */
+    height: 50px; /* Adjust the height as needed for the desired circle size */
+    background: rgb(60, 128, 244); /* Adjust the background color as needed */
+    
+}
+
+.main {
+    padding: 15px;
+    padding-bottom: 80px;
+    background-color: rgb(60, 128, 244); /* Add the background color here */
+    overflow: hidden; /* Clear the float */
+}
+
+.main-left {
+    padding-top: 10%; /* Add spacing between main-left and main-right */
+    width: calc(50% - 20px); /* Adjust the width as needed */
+    float: left;
+    margin-left: 30px;
+}
+
+.main-left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-left li {
+    font-size: 20px;
+    margin-right: 20px; /* Adjust the spacing between menu items as needed */
+    display: inline; /* Display li items inline */
+}
+
+.main-left a {
+    text-decoration: none;
+    color: #333; /* Add your preferred text color */
+    font-weight: bold;
+}
+
+.main-right {
+    width: calc(50% - 20px); /* Adjust the width as needed */
+    display: inline-block; /* Display .main-right as inline-block */
+    vertical-align: top; /* Align to the top */
+}
+.main-right p{
+    text-align: right;
+    font-size: 8px;
+    padding-top: 0;
+}
+.main-right img {
+    border-radius: 30%;
+    padding-top: 80px;
+    padding-left: 15%;
+    padding-bottom: 0;
+    width: 60%; /* Make sure the image doesn't exceed its container */
+    height: auto; /* Maintain the image's aspect ratio */
+}
+
+#Suggest {
+    text-align: center;
+    padding-top: 0;
+    background-color: #f0f0f0; /* Add your preferred background color */
+}
+#Suggest h1
+{
+    padding: 0;
+}
+#Suggest h1 {
+    color: #333; /* Add your preferred text color */
+    position: relative;
+    display: inline-block;
+}
+
+#Suggest h1::after {
+    content: "";
+    display: block;
+    width: 50px; /* Adjust the line width */
+    height: 3px; /* Adjust the line height */
+    background-color: blue; /* Add your preferred line color */
+    position: absolute;
+    bottom: -10px; /* Adjust the distance from the text */
+    left: 50%; /* Center the line horizontally */
+    transform: translateX(-50%);
+}
+h1 {
+    color: #333; /* Add your preferred text color */
+}
+#Suggest h1{
+    padding-top: 50px;
+}
+.sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    width:40%; /* Increased width */
+}
+
+.form-1 label {
+    color: #000; /* Changed label color to black */
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px; /* Added space between label and input */
+    display: block; /* Labels in block to avoid overlapping */
+}
+
+.form-1 select,
+.form-1 input[type="email"],
+.form-1 input[type="text"],
+.form-1 input[type="number"] {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    margin-bottom: 10px; /* Added space between input fields */
+    outline: 0;
+    padding: 10px;
+    width: calc(100% - 20px); /* Adjusted width */
+}
+
+.form-1 select {
+    margin-top: 5px;
+}
+
+.form-1 input[type="submit"] {
+    background-color: #08d;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 20px;
+    text-align: center;
+    width: calc(100% - 20px); /* Adjusted width */
+}
+
+.form-1 input[type="submit"]:active {
+    background-color: #06b;
+}
+
+/* Add your preferred styling for the image container */
+.image-container {
+    flex: 1;
+    max-width: 35%;
+    margin-right: 5%;/* Adjust the width as needed */
+}
+
+/* Add your preferred styling for the image */
+.image-container img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #333; /* Add a border if needed */
+}
+#FAQs h1 {
+    color: #333; /* Add your preferred text color */
+    position: relative;
+    display: inline-block;
+    
+}
+
+#FAQs h1::after {
+    content: "";
+    display: block;
+    width: 50px; /* Adjust the line width */
+    height: 3px; /* Adjust the line height */
+    background-color: blue; /* Add your preferred line color */
+    position: absolute;
+    bottom: -10px; /* Adjust the distance from the text */
+    left: 50%; /* Center the line horizontally */
+    transform: translateX(-50%);
+    
+}
+#FAQs {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* Add your preferred background color */
+    padding-bottom: 40px;
+}
+
+#FAQs h1 {
+    color: #333; 
+    margin-bottom: 60px;/* Add your preferred text color */
+}
+
+.faq {
+    padding-top: 40px;
+    margin: 20px auto;
+    max-width: 60%;
+    background-color: #fff; /* Add your preferred background color */
+    border: 1px solid #ccc; /* Add your preferred border color */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add your preferred box shadow */
+    padding: 20px;
+    text-align: left;
+}
+
+.question {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Add your preferred text color */
+}
+
+.answer {
+    display: none;
+    color: #333; /* Add your preferred text color */
+}
+
+.answer.active {
+    display: block;
+}
+#Recent {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* Add your preferred background color */
+}
+#Recent h1 {
+    color: #333; /* Add your preferred text color */
+    position: relative;
+    display: inline-block;
+    
+}
+#Recent h1::after {
+    content: "";
+    display: block;
+    width: 50px; /* Adjust the line width */
+    height: 3px; /* Adjust the line height */
+    background-color: blue; /* Add your preferred line color */
+    position: absolute;
+    bottom: -10px; /* Adjust the distance from the text */
+    left: 50%; /* Center the line horizontally */
+    transform: translateX(-50%);
+}
+#Recent h1 {
+    color: #333;
+    margin-bottom: 60px; /* Add your preferred text color */
+}
+
+.fourbox {
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.book {
+    width: 40%; /* Adjust the width as needed */
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd; /* Add your preferred border color */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.book img {
+    max-width: 200%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    margin-bottom: 10px;
+    
+}
+#contact {
+    text-align: center;
+    padding: 20px;
+    /* Add your preferred background color */
+}
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+
+*, 
+*:before, 
+*:after {
+   box-sizing: border-box; 
+}
+
+#contact h1 {
+    color: #333; /* Add your preferred text color */
+    position: relative;
+    display: inline-block;
+}
+
+#contact h1::after {
+    content: "";
+    display: block;
+    width: 70%; /* Adjust the line width */
+    height: 3px; /* Adjust the line height */
+    background-color: blue; /* Add your preferred line color */
+    position: absolute;
+    bottom: -10px; /* Adjust the distance from the text */
+    left: 50%; /* Center the line horizontally */
+    transform: translateX(-50%);
+}
+
+
+form {
+   max-width: 600px;
+   text-align: center;
+   margin: 20px auto;
+}
+
+form input, form textarea {
+     border: 0;
+     outline: 0;
+     padding: 1em;
+     border-radius: 8px;
+     display: block;
+     width: 100%;
+     margin-top: 1em;
+     font-family: 'Merriweather', sans-serif;
+     box-shadow: 0 1px 1px rgba(black, 0.1);
+     resize: none;
+}
+
+form input:focus, form textarea:focus {
+       box-shadow: 0 0px 2px rgba(#e74c3c, 1)!important;
+}
+
+form #input-submit {
+     color: white; 
+     background: rgb(60, 128, 244);
+     cursor: pointer;
+}
+
+form #input-submit:hover {
+       box-shadow: 0 1px 1px 1px rgba(#aaa, 0.6); 
+}
+
+form textarea {
+      height: 126px;
+}
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right { width: 50%; }
+
+.left {
+     margin-right: 2%; 
+}
+
+@media (max-width: 480px) {
+  .half {
+     width: 100%; 
+     float: none;
+     margin-bottom: 0; 
+  }
+}
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+#footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333; /* Add your preferred background color */
+    color: #fff; /* Add your preferred text color */
+}
+
+.main-left h2 {
+    font-size: 50px;
+    font-family: 'Your Preferred Font', sans-serif; /* Specify your preferred font */
+    margin-bottom: 10px; /* Adjust spacing as needed */
+    position: relative;
+}
+
+/*.word-hover span {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.word-hover:hover span {
+    transform: rotateY(360deg);
+    opacity: 0;
+}
+.word-hover {
+    font-size: 24px;
+    transition: color 0.3s ease-in-out; 
+}
+
+.word-hover:hover {
+    color: red; 
+}
+*/
+.hover-text {
+    font-size: 13px;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    color: #c8f4e2;
+}
+
+.hover-text .front,
+.hover-text .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s ease-in-out; /* Adjust the transition duration */
+    width: 100%; /* Take the full width of the container */
+}
+.main p
+{
+    padding-top: 140px;
+    font-size: 20px;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+}
+.animated-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    letter-spacing: 0.15em; /* Adjust the letter spacing */
+    animation: typing 5s steps(30, end) infinite, erase 5s steps(30, end) infinite 5s;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes erase {
+    from { width: 100% }
+    to { width: 0 }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+.hover-text .back {
+    opacity: 0;
+}
+
+.hover-text:hover .front {
+    opacity: 0;
+}
+
+.hover-text:hover .back {
+    opacity: 1;
+}
+
+.hover-text:hover {
+    cursor: default;
+}
+#he
+{
+    margin: 0;
+    padding: 15px;
+    margin-top: 10px;
+}
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.circle ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: end;
+    padding-left: 250px;
+
+}
+
+.circle li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.circle a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+}
+
+.circle a:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.circle a:hover:after {
+    width: 100%;
+}
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav ul {
+        margin-left: 0;
+    }
+
+    .main-left,
+    .main-right {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }
+
+    .main-left ul {
+        text-align: center;
+    }
+
+    .main-left li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #Suggest,
+    #FAQs,
+    #contact {
+        padding: 10px;
+    }
+
+    .form-1 label,
+    .contact-form label {
+        width: 100%;
+    }
+
+    .form-1 input,
+    .form-1 select,
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+    }
+
+    .form-1 input[type="submit"],
+    .contact-form input[type="submit"] {
+        width: 100%;
+    }
+
+    .contact-left,
+    .contact-right {
+        padding: 10px;
+    }
+    header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px
+    }
+}
+
+    

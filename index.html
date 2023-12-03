@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS</title>
+    <link rel="stylesheet" href="basecss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="sst-logo.jpg" alt="">
+        <h1 class="he">LibraryManagementSystem</h1>
+        <nav class="circle">
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="#Suggest">Suggest</a></li>
+                <li><a href="#Recent">NewStuff</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="dash.html">Librarian?</a></li>     
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main">
+        <div class="main-left">
+            <h2 class="hover-text">
+                <span class="word-flip">
+                    <span class="front">Dive into the world of Books!</span>
+                    <span class="back">Be 1% better everyday</span>
+                </span>
+            </h2>
+            <p class="animated-text">Please login/register to borrow a book</p>
+        </div>
+        <div class="main-right">
+            <img src="q1.webp" alt="">
+            <p>(Please hover on left side)</p>
+        </div>
+    </div>
+    <section id="Suggest"></section>
+    <div id="Suggest">
+        <h1>Suggest a Book</h1>
+        <div class="sec">
+            <div class="form-container">
+                <div class="form-1">
+                    <form action="#" method="post">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="bookName">Book Name:</label>
+                        <input type="text" id="bookName" name="bookName" required>
+        
+                        <label for="category">Category:</label>
+                        <select id="category" name="category" required>
+                            <option value="fiction">Fiction</option>
+                            <option value="non-fiction">Non-Fiction</option>
+                            <option value="mystery">Mystery</option>
+                            <!-- Add more options as needed -->
+                        </select>
+        
+                        <label for="estimatedPrice">Estimated Price:</label>
+                        <input type="number" id="estimatedPrice" name="estimatedPrice" required>
+        
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        
+            <div class="image-container">
+                <!-- Add your image here -->
+                <img src="q2.jpeg" alt="Your Image">
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <div id="FAQs">
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer('answer1')">Q1: What is Lorem Ipsum?</div>
+            <div class="answer" id="answer1">A1: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer('answer2')">Q2: Why do we use it?</div>
+            <div class="answer" id="answer2">A2: It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer('answer3')">Q3: Where does it come from?</div>
+            <div class="answer" id="answer3">A3: Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer('answer4')">Q4: Is it free?</div>
+            <div class="answer" id="answer4">A4: Yes, Lorem Ipsum is free and always will be.</div>
+        </div>
+    </div>
+    <section id="Recent">
+        <div id="Recent">
+            <h1>Recently Added</h1>
+            <div class="fourbox">
+                <div class="book">
+                    <img src="b1.jpeg" alt="Book 1">
+                    <h3>Eat that Frog</h3>
+                    <p>Brain Tracy</p>
+                </div>
+    
+                <div class="book">
+                    <img src="b2.png" alt="Book 2">
+                    <h3>Can't Hurt Me</h3>
+                    <p>David Goggins</p>
+                </div>
+    
+                <div class="book">
+                    <img src="b3.jpg" alt="Book 3">
+                    <h3>Power of Subconcious Mind</h3>
+                    <p>Dr. Joseph Murphy</p>
+                </div>
+    
+                <div class="book">
+                    <img src="b4.jpeg" alt="Book 4">
+                    <h3>48 Laws of power</h3>
+                    <p>Robert Greene</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+    <div id="contact">
+        <h1> Contact Form</h1>
+<form class="cf">
+  <div class="half left cf">
+    <input type="text" id="input-name" placeholder="Name">
+    <input type="email" id="input-email" placeholder="Email address">
+    <input type="text" id="input-subject" placeholder="Subject">
+  </div>
+  <div class="half right cf">
+    <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+  </div>  
+  <input type="submit" value="Submit" id="input-submit">
+</form>
+    </div>
+    <div id="footer">
+        <p>&copy; SST. All rights reserved. Made by Samrudh.</p>
+    </div>
+</section>
+    <script>
+        function toggleAnswer(answerId) {
+            const answer = document.getElementById(answerId);
+            const activeAnswers = document.querySelectorAll('.answer.active');
+
+            activeAnswers.forEach(activeAnswer => {
+                if (activeAnswer.id !== answerId) {
+                    activeAnswer.classList.remove('active');
+                }
+            });
+
+            answer.classList.toggle('active');
+        }
+    </script>
+    <!--
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".word-hover").each(function () {
+            var $this = $(this);
+            var words = $this.text().split(' ');
+
+            // Wrap each word in a span for individual styling
+            $this.html(words.map(function (word, index) {
+                return "<span class='word' data-original='" + word + "' data-alternate='"
+                    + (getAlternateWord(word, index)) + "'>" + word.split('').map(function (char, index) {
+                        return "<span class='letter' data-original='" + char + "' data-alternate='"
+                            + (char === ' ' ? '&nbsp;' : getAlternateWord(word, index)) + "'>" + char + "</span>";
+                    }).join('') + "</span>";
+            }).join(' '));
+        });
+
+        // Function to get an alternate word for a given word and index
+        function getAlternateWord(word, index) {
+            // Define alternate words based on your preference
+            var alternateWords = {
+                'Dive': 'Explore',
+                'into': 'through',
+                'the': 'a',
+                'world': 'universe',
+                'of': 'with',
+                'Books': 'Stories',
+                '!': '!!!'
+            };
+
+            return alternateWords.hasOwnProperty(word) ? alternateWords[word] : word;
+        }
+
+        // Handle hover effect for each word
+        $(".word-hover").hover(
+            function () {
+                $(this).find('.word').each(function () {
+                    $(this).text($(this).data('alternate'));
+                });
+            },
+            function () {
+                $(this).find('.word').each(function () {
+                    $(this).text($(this).data('original'));
+                });
+            }
+        );
+    });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".word-hover").hover(
+            function () {
+                var $this = $(this);
+                var originalText = $this.text();
+                var alternateText = getAlternateWord(originalText);
+
+                $this.data('original', originalText); // Store the original text
+                $this.text(alternateText); // Set the alternate text
+            },
+            function () {
+                var $this = $(this);
+                var originalText = $this.data('original'); // Retrieve the original text
+                $this.text(originalText); // Set back the original text
+            }
+        );
+
+        // Function to get an alternate word for a given word
+        function getAlternateWord(word) {
+            // Define alternate words based on your preference
+            var alternateWords = {
+                'Dive': 'Explore',
+                'into': 'through',
+                'the': 'a',
+                'world': 'universe',
+                'of': 'with',
+                'Books': 'Stories',
+                '!': '!!!'
+            };
+
+            return alternateWords.hasOwnProperty(word) ? alternateWords[word] : word;
+        }
+    });
+</script>-->
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".word-hover").wrapInner("<span class='word-flip'><span class='front'></span><span class='back'></span></span>");
+    });
+</script>
+<script>
+    // Smooth scrolling for browsers that don't support scroll-behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+</body>
+</html>
